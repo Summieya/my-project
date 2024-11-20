@@ -25,3 +25,4 @@ git clone https://github.com/summieya/my-projects.git
 Copy code
 cd my-projects
 3.	Open main.html in your browser to view the website.
+4. Screenshots of my project- (https://github.com/summieya/my-projects/blob/main/screenshots)
