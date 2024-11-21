@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bargain Basket/Contact Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #0db0f1;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+ 
+
+.search-container {
+    display: flex;
+}
+
+.search-bar {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+
+    width: 250px;
+    margin-right: 5px;
+    display: flex;
+}
+
+.search-button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f5f5ec;
+    color: #4b575cd7;
+    cursor: pointer;
+    display: flex;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-flex;
+    margin-left: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+footer {
+    background-color: #04195c;
+    color: #faf4f4;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 90px;
+    
+}
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+.footer-section {
+    flex: 1 1 180px; /* Adjust width of each section as needed */
+    text-align: left; /* Adjust alignment of content */
+}
+.footer-section h3 {
+    color: #797474; /* Example: Title color */
+    font-size: 16px; /* Example: Title font size */
+    margin-bottom: 0.5rem; /* Example: Adjust spacing */
+}
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+    font-size: 14px;
+}
+.footer-section p {
+    font-size: 0.9rem; /* Example: Adjust text size */
+}
+.footer-section a{
+    color: #fff;
+    text-decoration: none;
+    margin-top: 5px;
+    font-size: 14px;
+
+}
+.vertical-line {
+    border-left: 1px solid #f0e9e9;
+    height: 150px; /* Adjust height as needed */
+    margin-right: 20px; /* Adjust margin as needed */
+}
+.name{
+    margin-top: 30px;
+    margin-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: bolder;
+}
+.contact-us h2{
+    margin-top: 20px;
+    margin-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+}
+.service-hour h2{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+.service-hour h3{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    margin-left: 20px;
+    margin-top: 30px;
+}
+.general-inquiries h2{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+.general-inquiries h3{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    margin-left: 20px;
+    margin-top: 40px;
+}
+.general-inquiries a{
+    text-decoration: none;
+    margin-left:10px;
+}
+.customer-support h2{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    margin-left: 20px;
+    margin-top: 45px;
+}
+.customer-support h3{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    margin-left: 20px;
+    margin-top: 45px;
+}
+.customer-support a{
+    text-decoration: none;
+    margin-left: 10px;
+    
+}
+.corporate-office h2{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    margin-left: 20px;
+    margin-top: 50px;
+}
+.corporate-office h3{
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    margin-left: 20px;
+    margin-top: 50px;
+}
+.corporate-office a{
+    text-decoration: none;
+}
+.socials h2{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bolder;
+    margin-left: 20px;
+    margin-top: 55px;
+}
+.socials ul li{
+    list-style:disc;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+  </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Bargain Basket</div>
+        <div class="search-container">
+            <input type="text" placeholder="Search for products..." class="search-bar">
+            <button class="search-button">Search</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="main.html" title="Home"><i class="fas fa-home fa-lg"></i></a></li>
+                <li><a href="loginform.html" title="Login"><i class="fa-solid fa-user fa-lg"></i></a></li>
+                <li><a href="cart.html" title="Cart"><i class="fa-solid fa-cart-shopping fa-lg"></i></a></li>
+                <li><a href="aboutus.html" title="About Us"><i class="fa-solid fa-address-card fa-lg"></i></a></li>
+                <li><a href="contact-us.html" title="Contact Us"><i class="fa-solid fa-address-book fa-lg"></i></a></li>
+    
+            </ul>
+        </nav>
+    </header>
+ <main>
+        <div class="contact-us">
+            <h1 class="name">Contact Us</h1>
+            <h2>Thank you for visiting Bargain Basket, your premier destination for unbeatable deals on a wide range of products! We value your feedback and are here to assist you with any inquiries or concerns you may have. Please feel free to reach out to us using the following contact methods:</h2>
+        </div>
+        <div class="service-hour">
+            <h2>Customer Service Hours: </h2>
+            <h3>Monday - Friday: 9:00 AM - 6:00 PM (EST)</h3>
+        </div>
+        <div class="general-inquiries">
+            <h2>General Inquiries: </h2>
+            <h3>Email:<a href="mailto:info@bargainbasket.com">info@bargainbasket.com</a></h3>
+        </div>
+        <div class="customer-support">
+            <h2>Customer Support: </h2>
+            <h3>Email:<a href="mailto:support@bargainbasket.com">support@bargainbasket.com</a> 
+               <p> Phone: +1 (555) 123-4567</p></h3>
+        </div>
+        <div class="corporate-office">
+            <h2>Corporate Office:</h2>
+            <h3>Bargain Basket Inc.
+                123 Elm Street,
+                Citytown, Stateville 56789,
+                Countryland
+                <p>
+                For press inquiries, please contact:
+              <p>Email: <a href="mailto:press@bargainbasket.com">press@bargainbasket.com</a> </p>
+            </h3>
+        </p>
+        </div>
+        <div class="socials">
+            <h2>Connect with us on social media</h2>
+            <ul>
+                <li>Facebook: @BargainBasket</li>
+                <li>Twitter: @BargainBasketHQ</li>
+                <li>Instagram: @BargainBasketOfficial</li>
+            </ul>
+        </div>
+    </main>
+<footer>
+  <div class="footer-container">
+    <div class="footer-section">
+        <h3>About</h3>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Careers</a></li>
+        </ul>
+    </div>
+  
+    <div class="footer-section">
+      <h3>Help</h3>
+      <ul>
+        <li><a href="#">Cancellation & returns</a></li>
+        <li><a href="#">Payments</a></li>
+        <li><a href="#">Shipment</a></li>
+      </ul>
+  </div> 
+        <div class="footer-section">
+        <h3>Consumer Policy</h3>
+        <ul>
+            <li><a href="#">Cancellation Policy</a></li>
+            <li><a href="#">Terms Of Use</a></li>
+            <li><a href="#">Security</a></li>
+            <li><a href="#">Privacy</a></li>
+        </ul>
+    </div>
+    <div class="vertical-line"> </div>
+    <div class="footer-section">
+      <h3>Registered Office Address</h3>
+      <p>123 Elm Street,
+        Citytown, Stateville 56789,
+        Countryland</p>
+     
+  </div>
+    <div class="footer-section">
+        
+        <h3>Follow Us</h3>
+        <ul>
+            <li><a href="#">Facebook</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Instagram</a></li>
+        </ul>
+    </div>
+    <div class="footer-section">
+       <ul>
+            <li>&copy; 2024 Bargain Basket.com</li>
+        </ul>
+    </div>
+    <div class="footer-section">
+      <ul>
+        <li><a href="#">Help Center</a></li>
+       </ul>
+   </div>
+   <div class="footer-section">
+    <ul>
+      <li><a href="#">Advertise</a></li>
+     </ul>
+ </div>
+ <div class="footer-section">
+  <ul>
+       <li><a href="#">Become a Seller</a></li>
+   </ul>
+</div>
+   
+</div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bargain Basket/Beauty</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        *{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.container {
+    display: flex;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+    
+header {
+    background-color: #0db0f1;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+ 
+
+.search-container {
+    display: flex;
+}
+
+.search-bar {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+
+    width: 250px;
+    margin-right: 5px;
+    display: flex;
+}
+
+.search-button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f5f5ec;
+    color: #4b575cd7;
+    cursor: pointer;
+    display: flex;
+}
+#search-form {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the form elements horizontally */
+    align-items: center; /* Align the items vertically */
+}
+
+#search-input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px; /* Rounded corners only on the left side */
+    margin-right: 10px; /* Prevent double borders */
+}
+
+button {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 0 4px 4px 0; /* Rounded corners only on the right side */
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-flex;
+    margin-left: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+.nav a i {
+    margin-right: 15px;
+}
+.nav-list ul {
+    
+    display: flex;
+    justify-content: center;
+    background-color:  #04195c9d;
+}
+
+.nav-list ul li {
+    list-style: none;
+}
+
+.nav-list ul li a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.nav-list ul li a:hover {
+    background-color: #243d919d;
+}
+
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.slider {
+    position: relative;
+    max-width: 1500px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.slide img {
+    width: 100%;
+    vertical-align: middle;
+    height: 760px;
+}
+.text-overlay {
+    position: absolute;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+   
+}
+.text-overlay h3{
+    font-size: 33px;
+    font-weight: bolder;
+
+}
+.text-overlay p{
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: 800;
+    color: white;
+    padding: 10px;
+}
+.text-overlay2 {
+    position: absolute;
+    background-color: transparent;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+   
+}
+.text-overlay2 h3{
+    font-size: 33px;
+    font-weight: bolder;
+
+}
+
+.text-overlay2 p{
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    padding: 10px;
+}
+.text-overlay2 a{
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: 500;
+    color: white;
+    background-color: #f50057;
+    padding: 10px;
+    text-decoration: none;
+}
+.text-overlay3 {
+    position: absolute;
+    background-color: transparent;
+    top: 300px;
+    left: 20px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 15px;
+    border-radius: 5px;
+   
+}
+.text-overlay3 h3{
+    font-size: 33px;
+    font-weight: bolder;
+
+}
+.text-overlay3 p{
+    margin: 10px 0;
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    padding: 10px;
+}
+    
+    
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+.promotions {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 0;
+    background-color: #fff;
+}
+
+.promotion {
+    background-image: url(images/makeup.webp);
+    filter: blur(2);
+    text-align: center;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 5px;
+    width: 30%;
+}
+
+.promotion h3 {
+    margin-bottom: 10px;
+}
+
+.promotion a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    color:black;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.promotion1 {
+    background-image: url(images/makeupkit.jpeg);
+    text-align: center;
+    background-color: #f8f8f8;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 30%;
+}
+
+.promotion1 h3 {
+    margin-bottom: 10px;
+}
+
+.promotion1 a{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    color: black;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 5px;
+}
+.promotion1 a p{
+    font-weight: 500;
+}
+.promotion2 {
+    background-image: url(images/nailpolish.jpg);
+    filter: blur(2);
+    text-align: center;
+    background-color: #f8f8f8;
+    padding: 20px;
+    border-radius: 5px;
+    width: 30%;
+    max-height: max-content;
+}
+
+.promotion2 h3 {
+    margin-bottom: 10px;
+}
+
+.promotion2 a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    color:black;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.products {
+    padding: 20px;
+    background-color: whitesmoke;
+}
+
+.products h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.product {
+    text-align: center;
+    margin-bottom:10px;
+}
+.product:hover{
+    box-shadow: 20px 10px 15px 5px rgba(0,0,0,0.3), inset 5px 5px 10px rgba(0, 0, 0, 0.2)
+}
+.product a{
+    display: inline-block;
+    text-decoration: none;
+    background-color: #f50057;
+    padding: 10px;
+    margin-top: 10px;
+    color: white;
+}
+.product img{
+    max-width: 250px;
+    height: 250px;
+}
+
+
+
+footer {
+    background-color: #04195c;
+    color: #faf4f4;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 5px;
+    
+}
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+.footer-section {
+    flex: 1 1 180px; /* Adjust width of each section as needed */
+    text-align: left; /* Adjust alignment of content */
+}
+.footer-section h3 {
+    color: #797474; /* Example: Title color */
+    font-size: 16px; /* Example: Title font size */
+    margin-bottom: 0.5rem; /* Example: Adjust spacing */
+}
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+    font-size: 14px;
+}
+.footer-section p {
+    font-size: 0.9rem; /* Example: Adjust text size */
+}
+.footer-section a{
+    color: #fff;
+    text-decoration: none;
+    margin-top: 5px;
+    font-size: 14px;
+
+}
+.vertical-line {
+    border-left: 1px solid #f0e9e9;
+    height: 150px; /* Adjust height as needed */
+    margin-right: 20px; /* Adjust margin as needed */
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Bargain Basket</div>
+        <div class="search-container">
+            <form id="search-form">
+                <input type="text" id="search-input" placeholder="Search for products..." class="search-bar">
+                  <button type="submit" class="search-button">Search</button>
+                </form>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="main.html" title="Home"><i class="fas fa-home fa-lg"></i></a></li>
+                <li><a href="loginform.html" title="Login"><i class="fa-solid fa-user fa-lg"></i></a></li>
+                <li><a href="cart.html" title="Cart"><i class="fa-solid fa-cart-shopping fa-lg"></i></a></li>
+                <li><a href="aboutus.html" title="About Us"><i class="fa-solid fa-address-card fa-lg"></i></a></li>
+                <li><a href="contact-us.html" title="Contact Us"><i class="fa-solid fa-address-book fa-lg"></i></a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    <nav class="nav-list">
+        <ul>
+            <li><a href="#">Beauty</a></li>
+            <li><a href="#">Lip Gloss</a></li>
+            <li><a href="#">Wigs</a></li>
+            <li><a href="#">Nail Polish</a></li>
+            <li><a href="#">Cream</a></li>
+            <li><a href="#">Lipstick</a></li>
+            <li><a href="#">Blogs</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="hero">
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide">
+                     <img src="images/covermakeup.jpg" alt="Image 1">
+                     <div class="text-overlay">
+                        <h3>Radiate Your Beauty With Our Products</h3>
+                        <p>Your Beauty, Our Passion</p>
+                     </div>                    
+                    </div>
+                    <div class="slide">
+                        <img src="images/covermakeup2.jpg" alt="Image 2">
+                        <div class="text-overlay2">
+                            <h3>Summer Sale is Live</h3>
+                            <p>Flat 20% Off</p>
+                            <a href="">Shop Now</a>
+                         </div>  
+                    </div>
+                    <div class="slide">
+                        <img src="images/covermakeup3.jpg" alt="Image 3">
+                        <div class="text-overlay3">
+                            <h3>Last Chance to Save Big on Beauty</h3>
+                            <p>Grab Your Favorites - Sale Ends Soon!</p>
+
+                         </div>  
+                    </div>
+                </div>
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>   
+        </section>
+      <section class="promotions">
+            <div class="promotion">
+                <a href="#">
+                <h3>Party Glam Up</h3>
+                <p>New Products</p>
+            </a>
+            </div>
+        
+            <div class="promotion1">
+                <a href="#">
+                <h3>Cosmetics</h3>
+                <p>Up to 30% off</p>
+            </a>
+            </div>
+            <div class="promotion2">
+                <a href="#">
+                <h3>Nail Polish</h3>
+                <p>Up to 30% off</p>
+            </a>
+            </div>
+        </section>
+        <section class="products">
+            <h2>Our Products</h2>
+            <div class="product-grid">
+                <div class="product">
+                    <img src="images/mascara.avif" alt="Product 1">
+                    <h3>Mascara</h3>
+                    <p>From $41.99</p>
+                    <a href="#">Shop Now</a>
+                </div>
+                <div class="product">
+                    <img src="images/brushes.png" alt="Product 2">
+                    <h3>Makeup Brushes</h3>
+                    <p>From $30.00</p>
+                    <a href="#">Shop Now</a>
+                </div>
+                <div class="product">
+                    <img src="images/faceoil.jpeg" alt="Product 3">
+                    <h3>Body Lotion</h3>
+                    <p>From $20.00</p>
+                    <a href="#">Shop Now</a>
+                </div>
+                <div class="product">
+                    <img src="images/shampoo.jpg" alt="Product 4">
+                    <h3>Shampoo</h3>
+                    <p>From $26.00</p>
+                    <a href="#">Shop Now</a>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+              <h3>About</h3>
+              <ul>
+              <li><a href="#">About Us</a></li>
+             <li><a href="#">Contact Us</a></li>
+             <li><a href="#">Careers</a></li>
+            </ul>
+           </div>
+            
+              <div class="footer-section">
+                <h3>Help</h3>
+                <ul>
+                  <li><a href="#">Cancellation & returns</a></li>
+                  <li><a href="#">Payments</a></li>
+                  <li><a href="#">Shipment</a></li>
+                </ul>
+            </div> 
+                  <div class="footer-section">
+                  <h3>Consumer Policy</h3>
+                  <ul>
+                      <li><a href="#">Cancellation Policy</a></li>
+                      <li><a href="#">Terms Of Use</a></li>
+                      <li><a href="#">Security</a></li>
+                      <li><a href="#">Privacy</a></li>
+                  </ul>
+              </div>
+              <div class="vertical-line"> </div>
+              <div class="footer-section">
+                <h3>Registered Office Address</h3>
+                <p>123 Elm Street,
+                  Citytown, Stateville 56789,
+                  Countryland</p>
+               
+            </div>
+              <div class="footer-section">
+                  
+                  <h3>Follow Us</h3>
+                  <ul>
+                      <li><a href="#">Facebook</a></li>
+                      <li><a href="#">Twitter</a></li>
+                      <li><a href="#">Instagram</a></li>
+                  </ul>
+              </div>
+              <div class="footer-section">
+                 <ul>
+                      <li>&copy; 2024 Bargain Basket.com</li>
+                  </ul>
+              </div>
+              <div class="footer-section">
+                <ul>
+                  <li><a href="#">Help Center</a></li>
+                 </ul>
+             </div>
+             <div class="footer-section">
+              <ul>
+                <li><a href="#">Advertise</a></li>
+               </ul>
+           </div>
+           <div class="footer-section">
+            <ul>
+                 <li><a href="#">Become a Seller</a></li>
+             </ul>
+         </div>
+             
+          </div>
+            </footer>
+            <script>
+                let slideIndex = 0;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+        
+        function showSlides(n) {
+            let slides = document.querySelectorAll(".slide");
+            if (n >= slides.length) {
+                slideIndex = 0;
+            }
+            if (n < 0) {
+                slideIndex = slides.length - 1;
+            }
+            slides.forEach(slide => {
+                slide.style.display = "none";
+            });
+            slides[slideIndex].style.display = "block";
+        }
+        
+            </script>
+     </body>
+  </html>
+      

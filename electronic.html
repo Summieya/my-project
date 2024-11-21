@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronics</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+         body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background-color: #0db0f1;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+ 
+
+.search-container {
+    display: flex;
+}
+
+.search-bar {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+
+    width: 250px;
+    margin-right: 5px;
+    display: flex;
+}
+
+.search-button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f5f5ec;
+    color: #4b575cd7;
+    cursor: pointer;
+    display: flex;
+}
+#search-form {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the form elements horizontally */
+    align-items: center; /* Align the items vertically */
+}
+
+#search-input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px; /* Rounded corners only on the left side */
+    margin-right: 10px; /* Prevent double borders */
+}
+
+button {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 0 4px 4px 0; /* Rounded corners only on the right side */
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-flex;
+    margin-left: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr); /* Seven columns of equal width */
+            gap: 10px; /* Optional: space between columns */
+            height: 200px; /* Adjust as needed */
+            margin-left: 20px;
+        }
+
+        .grid-item {
+            background-color: white; /* Just for visibility */
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid transparent; /* Optional: border for visibility */
+            margin-top: 20px;
+        }
+        .hover-img{
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.grid-item:hover{
+    box-shadow: 0px 0px 10px 10px rgb(211, 208, 208);
+    transform: scale(1.1);
+}
+.grid-item a img {
+    max-width: 100%;
+    height: 150px;
+    margin-top: 10px;
+}
+.grid-item a p{
+    color: green;
+}
+.grid-item a h3{
+    color: grey;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+.grid-item a h2{
+    color: black;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+.grid-item a{
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+
+}
+.category-name {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    margin-left: 20px;
+}
+.view-more {
+    position: absolute;
+    background-color: #0db0f1;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 0.5rem 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    float: right;
+    top: 90px;
+    right: 40px;
+    
+    
+}
+.grids-container {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr); /* Seven columns of equal width */
+            gap: 10px; /* Optional: space between columns */
+            height: 200px; /* Adjust as needed */
+            margin-left: 20px;
+        }
+
+        .grids-item {
+            background-color: white; /* Just for visibility */
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid transparent; /* Optional: border for visibility */
+            margin-top: 30px;
+            
+        }
+        .hover-img{
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+.grids-item:hover{
+    box-shadow: 0px 0px 10px 10px rgb(211, 208, 208);
+    transform: scale(1.1);
+}
+.grids-item a img {
+    max-width: 100%;
+    height: 150px;
+    margin-top: 10px;
+}
+.grids-item a p{
+    color: green;
+}
+.grids-item a h3{
+    color: grey;
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+}
+.grids-item a h2{
+    color: black;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+.grids-item a{
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+
+}
+.category2-name {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+    margin-left: 20px;
+    margin-top: 150px;
+}
+.see-more {
+    position: absolute;
+    background-color: #0db0f1;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 0.5rem 0.5rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    float: right;
+    top: 480px;
+    right: 40px;
+    
+    
+}
+footer {
+    background-color: #04195c;
+    color: #faf4f4;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 200px;
+    
+}
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+.footer-section {
+    flex: 1 1 180px; /* Adjust width of each section as needed */
+    text-align: left; /* Adjust alignment of content */
+}
+.footer-section h3 {
+    color: #797474; /* Example: Title color */
+    font-size: 16px; /* Example: Title font size */
+    margin-bottom: 0.5rem; /* Example: Adjust spacing */
+}
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+    font-size: 14px;
+}
+.footer-section p {
+    font-size: 0.9rem; /* Example: Adjust text size */
+}
+.footer-section a{
+    color: #fff;
+    text-decoration: none;
+    margin-top: 5px;
+    font-size: 14px;
+
+}
+.vertical-line {
+    border-left: 1px solid #f0e9e9;
+    height: 150px; /* Adjust height as needed */
+    margin-right: 20px; /* Adjust margin as needed */
+}
+
+  
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Bargain Basket</div>
+        <div class="search-container">
+            <form id="search-form">
+                <input type="text" id="search-input" placeholder="Search for products..." class="search-bar">
+                  <button type="submit" class="search-button">Search</button>
+                </form>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="main.html" title="Home"><i class="fas fa-home fa-lg"></i></a></li>
+                <li><a href="loginform.html" title="Login"><i class="fa-solid fa-user fa-lg"></i></a></li>
+                <li><a href="cart.html" title="Cart"><i class="fa-solid fa-cart-shopping fa-lg"></i></a></li>
+                <li><a href="aboutus.html" title="About Us"><i class="fa-solid fa-address-card fa-lg"></i></a></li>
+                <li><a href="contact-us.html" title="Contact Us"><i class="fa-solid fa-address-book fa-lg"></i></a></li>
+            </ul>
+        </nav>
+        
+    </header>
+  
+    <main>
+    <h2 class="category-name">Laptops</h2>
+    <div class="grid-container">
+     <div class="grid-item">
+            <a href="#" >
+                <img src="images/intel 12th gen.jpeg" alt="Intel 12th Gen laptops" class="hover-img">
+                <h2>Intel 12th Gen</h2>
+                <p>From Rs 12,990</p>
+                <h3>Best in Performance</h3>
+            </a>  
+        </div>
+        <div class="grid-item">
+            <a href="#" >
+                <img src="images/zebronics.jpg" alt="Zebronics laptops" class="hover-img">
+                <h2>Zebronics & Wings</h2>
+                <p>From Rs 22,990</p>
+                <h3>Homegrown Brands</h3>
+            </a>  
+        </div>
+        <div class="grid-item">
+            <a href="#" >
+                <img src="images/samsung.jpg" alt="Samsung laptops" class="hover-img">
+                <h2>Samsung Laptops</h2>
+                <p>From Rs 42,980</p>
+                <h3>Latest Series Launched</h3>
+            </a>  
+        </div>
+        <div class="grid-item">
+            <a href="#" >
+                <img src="images/prime.jpg" alt="prime laptops" class="hover-img">
+                <h2>Prime Laptops</h2>
+                <p>From Rs 14,990</p>
+                <h3>Best for Students</h3>
+            </a>  
+        </div>
+        <div class="grid-item">
+            <a href="#"  >
+                <img src="images/ultimus.jpg" alt="Ultimus laptops" class="hover-img">
+                <h2>Ultimus Laptops</h2>
+                <p>From Rs 12,990</p>
+                <h3>Best value Deal</h3>
+            </a>  
+        </div>
+        <div class="grid-item">
+            <a href="#" >
+                <img src="images/apple.jpg" alt="MacBook" class="hover-img">
+                <h2>Apple MacBook Air</h2>
+                <p>From Rs 77,990</p>
+                <h3>Never Before Price</h3>
+            </a>  
+        </div>
+        <div class="grid-item">
+            <a href="#">
+                <img src="images/msi.jpg" alt="MSI laptops" class="hover-img">
+                  <h2>MSI Laptops</h2>
+                <p>From Rs 32,990</p>
+                <h3>Modern, Prestige & more</h3>
+            </a>  
+        </div>
+    </div>
+  
+    <h2 class="category2-name">Styling & Healthcare</h2>
+    <div class="grids-container">
+     <div class="grids-item">
+            <a href="#" >
+                <img src="images/hairstyling.jpg" alt="styling-combos" class="hover-img">
+                <h2>Best of Styling Combos</h2>
+                <p>Upto 45% Off</p>
+                <h3>Vega, Havells, Nova & more</h3>
+            </a>  
+        </div>
+        <div class="grids-item">
+            <a href="#" >
+                <img src="images/shavers.jpg" alt="shavers" class="hover-img">
+                <h2>Best Of Shavers</h2>
+                <p>From Rs 1,649</p>
+                <h3>Havells & Philips</h3>
+            </a>  
+        </div>
+        <div class="grids-item">
+            <a href="#" >
+                <img src="images/epilators.jpeg" alt="epilators" class="hover-img">
+                <h2>Best of Epilators</h2>
+                <p>Upto 45% Off</p>
+                <h3>Braun & Philips</h3>
+            </a>  
+        </div>
+        <div class="grids-item">
+            <a href="#" >
+                <img src="images/hairdryers.jpeg" alt="hair-dryers" class="hover-img">
+                <h2>Best of Hair Dryers</h2>
+                <p>From Rs 549</p>
+                <h3>Realme, Philips & more</h3>
+            </a>  
+        </div>
+        <div class="grids-item">
+            <a href="#"  >
+                <img src="images/hairstraightners.jpeg" alt="hair-straightners" class="hover-img">
+                <h2>Best of Hair Straightners</h2>
+                <p>From Rs 279</p>
+                <h3>Vega, Nova & more</h3>
+            </a>  
+        </div>
+        <div class="grids-item">
+            <a href="#" >
+                <img src="images/bodyfat.jpg" alt="body-fat-analyzer" class="hover-img">
+                <h2>Body Fat Analyzer</h2>
+                <p>From Rs 1,599</p>
+                <h3>Dr Trust, Omron & more</h3>
+            </a>  
+        </div>
+        <div class="grids-item">
+            <a href="#">
+                <img src="images/haircurlers.jpg" alt="hair-curlers" class="hover-img">
+                  <h2>Best of Hair Curlers</h2>
+                <p>From Rs 999</p>
+                <h3>Philips, Vega, Dyson & more</h3>
+            </a>  
+        </div>
+    </div>
+
+      
+    <button class="view-more">View More</button>
+    <button class="see-more">View More</button>
+</main>
+<footer>
+    <div class="footer-container">
+      <div class="footer-section">
+          <h3>About</h3>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Careers</a></li>
+          </ul>
+      </div>
+    
+      <div class="footer-section">
+        <h3>Help</h3>
+        <ul>
+          <li><a href="#">Cancellation & returns</a></li>
+          <li><a href="#">Payments</a></li>
+          <li><a href="#">Shipment</a></li>
+        </ul>
+    </div> 
+          <div class="footer-section">
+          <h3>Consumer Policy</h3>
+          <ul>
+              <li><a href="#">Cancellation Policy</a></li>
+              <li><a href="#">Terms Of Use</a></li>
+              <li><a href="#">Security</a></li>
+              <li><a href="#">Privacy</a></li>
+          </ul>
+      </div>
+      <div class="vertical-line"> </div>
+      <div class="footer-section">
+        <h3>Registered Office Address</h3>
+        <p>123 Elm Street,
+          Citytown, Stateville 56789,
+          Countryland</p>
+       
+    </div>
+      <div class="footer-section">
+          
+          <h3>Follow Us</h3>
+          <ul>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Twitter</a></li>
+              <li><a href="#">Instagram</a></li>
+          </ul>
+      </div>
+      <div class="footer-section">
+         <ul>
+              <li>&copy; 2024 Bargain Basket.com</li>
+          </ul>
+      </div>
+      <div class="footer-section">
+        <ul>
+          <li><a href="#">Help Center</a></li>
+         </ul>
+     </div>
+     <div class="footer-section">
+      <ul>
+        <li><a href="#">Advertise</a></li>
+       </ul>
+   </div>
+   <div class="footer-section">
+    <ul>
+         <li><a href="#">Become a Seller</a></li>
+     </ul>
+ </div>
+     
+  </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+ 
+
+    <style>
+body {
+    font-family: Arial,Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+header {
+            background-color: #0db0f1;
+            color: white;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+}
+
+header .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-flex;
+    margin-left: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+ footer {
+    background-color: #04195c;
+    color: #faf4f4;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 90px;
+ }   
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+.footer-section {
+    flex: 1 1 180px; /* Adjust width of each section as needed */
+    text-align: left; /* Adjust alignment of content */
+}
+.footer-section h3 {
+    color: #797474; /* Example: Title color */
+    font-size: 16px; /* Example: Title font size */
+    margin-bottom: 0.5rem; /* Example: Adjust spacing */
+}
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+    font-size: 14px;
+}
+.footer-section p {
+    font-size: 0.9rem; /* Example: Adjust text size */
+}
+.footer-section a{
+    color: #fff;
+    text-decoration: none;
+    margin-top: 5px;
+    font-size: 14px;
+
+}
+.vertical-line {
+    border-left: 1px solid #f0e9e9;
+    height: 150px; /* Adjust height as needed */
+    margin-right: 20px; /* Adjust margin as needed */
+}
+.center-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+}
+        .form-container {
+            background: #fff;
+            padding: 50px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            justify-content: center;
+            align-items: center;
+            margin-top: 80px;
+        }
+        .form-container h2 {
+            margin-bottom: 20px;
+        }
+        .form-group {
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            justify-content: center;
+        }
+        
+        .form-group input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            width: 420px;
+        }
+        .form-group input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Bargain Basket</div>
+        <nav>
+            <ul>
+                <li><a href="main.html" title="Home"><i class="fas fa-home fa-lg"></i></a></li>
+                <li><a href="loginform.html" title="Login"><i class="fa-solid fa-user fa-lg"></i></a></li>
+                <li><a href="cart.html" title="Cart"><i class="fa-solid fa-cart-shopping fa-lg"></i></a></li>
+                <li><a href="aboutus.html" title="About Us"><i class="fa-solid fa-address-card fa-lg"></i></a></li>
+                <li><a href="contact-us.html" title="Contact Us"><i class="fa-solid fa-address-book fa-lg"></i></a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    <div class="center-wrapper">
+    <div class="form-container">
+        <h2>Payment Form</h2>
+        <form action="/submit-payment" method="post">
+            <div class="form-group">
+                <label for="fullName">Full Name</label>
+                <input type="text" id="fullName" name="fullName" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="cardNumber">Card Number</label>
+                <input type="text" id="cardNumber" name="cardNumber" pattern="\d{16}" required>
+            </div>
+            <div class="form-group">
+                <label for="expiryDate"> Expiry Date</label>
+                <input type="date" id="expiryDate" name="expiryDate" required>
+                
+            </div>
+            <div class="form-group">
+                <label for="cvv">CVV</label>
+                <input type="password" id="cvv" name="cvv" pattern="\d{3}" required>
+            </div>
+            <div class="form-group">
+                <label for="billingAddress">Billing Address</label>
+                <input type="text" id="billingAddress" name="billingAddress" required>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit Payment">
+            </div>
+        </form>
+    </div>
+    </div>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About</h3>
+                <ul>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+          
+            <div class="footer-section">
+              <h3>Help</h3>
+              <ul>
+                <li><a href="#">Cancellation & returns</a></li>
+                <li><a href="#">Payments</a></li>
+                <li><a href="#">Shipment</a></li>
+              </ul>
+          </div> 
+                <div class="footer-section">
+                <h3>Consumer Policy</h3>
+                <ul>
+                    <li><a href="#">Cancellation Policy</a></li>
+                    <li><a href="#">Terms Of Use</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Privacy</a></li>
+                </ul>
+            </div>
+            <div class="vertical-line"> </div>
+            <div class="footer-section">
+              <h3>Registered Office Address</h3>
+              <p>123 Elm Street,
+                Citytown, Stateville 56789,
+                Countryland</p>
+             
+          </div>
+            <div class="footer-section">
+                
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+               <ul>
+                    <li>&copy; 2024 Bargain Basket.com</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+              <ul>
+                <li><a href="#">Help Center</a></li>
+               </ul>
+           </div>
+           <div class="footer-section">
+            <ul>
+              <li><a href="#">Advertise</a></li>
+             </ul>
+         </div>
+         <div class="footer-section">
+          <ul>
+               <li><a href="#">Become a Seller</a></li>
+           </ul>
+       </div>
+           
+        </div>
+         
+       
+    </footer>
+
+</body>
+</html>

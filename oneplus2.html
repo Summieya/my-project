@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bargain Basket</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        body {
+    font-family: Arial,Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+header {
+    background-color: #0db0f1;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+ 
+
+.search-container {
+    display: flex;
+}
+
+.search-bar {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+
+    width: 250px;
+    margin-right: 5px;
+    display: flex;
+}
+
+.search-button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f5f5ec;
+    color: #4b575cd7;
+    cursor: pointer;
+    display: flex;
+}
+#search-form {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the form elements horizontally */
+    align-items: center; /* Align the items vertically */
+}
+
+#search-input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px; /* Rounded corners only on the left side */
+    margin-right: 10px; /* Prevent double borders */
+}
+
+button {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 0 4px 4px 0; /* Rounded corners only on the right side */
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-flex;
+    margin-left: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+.nav a i {
+    margin-right: 15px;
+}
+.mobile-list {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+}
+
+.mobile-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-decoration: none;
+    color: inherit;
+    margin-bottom: 10px;
+    background-color: #fff;
+    transition: background-color 0.3s;
+}
+
+.mobile-item:hover {
+    background-color: #f5f5f5;
+    box-shadow: 20px 10px 15px  rgba(0,0,0,0.2);
+}
+
+.mobile-image {
+    width: 150px; /* Adjust size as needed */
+    height: 120px;
+    margin-right: 15px;
+}
+
+.mobile-details {
+    flex: 1;
+}
+
+.mobile-description {
+    font-size: 14px;
+    margin: 0 0 10px;
+}
+.product-price{
+    font-size: 16px;
+    color: green;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.add-to-cart {
+    background-color: #007bff;
+    border: none;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3;
+}
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.page-link {
+    display: block;
+    padding: 10px 15px;
+    margin: 0 5px;
+    color: rgb(87, 82, 82);
+    text-decoration: none;
+    border: 1px solid grey;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.page-link:hover {
+    background-color: grey;
+    color: #fff;
+}
+
+.page-link.disabled {
+    color: #ccc;
+    border: 1px solid #ccc;
+    pointer-events: none;
+}
+
+
+
+footer {
+    background-color: #04195c;
+    color: #faf4f4;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 0px;
+    
+}
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+.footer-section {
+    flex: 1 1 180px; /* Adjust width of each section as needed */
+    text-align: left; /* Adjust alignment of content */
+}
+.footer-section h3 {
+    color: #797474; /* Example: Title color */
+    font-size: 16px; /* Example: Title font size */
+    margin-bottom: 0.5rem; /* Example: Adjust spacing */
+}
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+    font-size: 14px;
+}
+.footer-section p {
+    font-size: 0.9rem; /* Example: Adjust text size */
+}
+.footer-section a{
+    color: #fff;
+    text-decoration: none;
+    margin-top: 5px;
+    font-size: 14px;
+
+}
+.vertical-line {
+    border-left: 1px solid #f0e9e9;
+    height: 150px; /* Adjust height as needed */
+    margin-right: 20px; /* Adjust margin as needed */
+}
+.popup-notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: white;
+    border: 1px solid rgba(138, 135, 135, 0.589);
+    width: 20%;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 1000;
+    text-align: center;
+    display: none; /* Hidden by default */
+}
+
+.popup-notification button {
+    background-color: #fff;
+    color: #007bff;
+    border: none;
+    padding: 10px 10px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.popup-notification button:hover {
+    background-color: #f5f5f5;
+}
+
+
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Bargain Basket</div>
+        <div class="search-container">
+          <form id="search-form">
+          <input type="text" id="search-input" placeholder="Search for products..." class="search-bar">
+            <button type="submit" class="search-button">Search</button>
+          </form>
+          </div>
+        <nav>
+            <ul>
+                <li><a href="main.html" title="Home"><i class="fas fa-home fa-lg"></i></a></li>
+                <li><a href="loginform.html" title="Login"><i class="fa-solid fa-user fa-lg"></i></a></li>
+                <li><a href="cart.html" title="Cart"><i class="fa-solid fa-cart-shopping fa-lg"></i></a></li>
+                <li><a href="aboutus.html" title="About Us"><i class="fa-solid fa-address-card fa-lg"></i></a></li>
+                <li><a href="contact-us.html" title="Contact Us"><i class="fa-solid fa-address-book fa-lg"></i></a></li>
+            </ul>
+        </nav>
+        
+    </header>
+    <main>
+        
+    
+        <div class="mobile-list">
+            <a href="#" class="mobile-item">
+                <img src="images/oneplus_10T.png" alt="Mobile Name" class="mobile-image">
+                <div class="mobile-details">
+                    <h3>OnePlus 10T SmartPhone</h3>
+                    <p class="mobile-description">This is a brief description of the mobile phone. It includes key features and specifications.</p>
+                    <p class="product-price">$235.00</p>
+                    <button class="add-to-cart" data-name="OnePlus 10T SmartPhone" data-image="images/oneplus_10T.png" data-price="$235.00">Add to Cart</button>
+                </div>
+            </a>
+            <a href="#" class="mobile-item">
+                <img src="images/oneplus10R_150W.png" alt="Mobile Name" class="mobile-image">
+                <div class="mobile-details">
+                    <h3>OnePlus 10R 150W</h3>
+                    <p class="mobile-description">This is a brief description of the mobile phone. It includes key features and specifications.</p>
+                    <p class="product-price">$336.00</p>
+                    <button class="add-to-cart" data-name="OnePlus 10R 150W" data-image="images/oneplus10R_150W.png" data-price="$336.00">Add to Cart</button>
+                </div>
+            </a>
+            <a href="#" class="mobile-item">
+                <img src="images/oneplus pad2.avif" alt="Mobile Name" class="mobile-image">
+                <div class="mobile-details">
+                    <h3>OnePlus Pad 2</h3>
+                    <p class="mobile-description">This is a brief description of the mobile phone. It includes key features and specifications.</p>
+                    <p class="product-price">$823.99</p>
+                    <button class="add-to-cart" data-name="OnePlus Pad 2" data-image="images/oneplus pad2.avif" data-price="$823.99">Add to Cart</button>
+                </div>
+            </a>
+            <a href="#" class="mobile-item">
+                <img src="images/oneplus 10 pro.png" alt="Mobile Name" class="mobile-image">
+                <div class="mobile-details">
+                    <h3>OnePlus 10Pro</h3>
+                    <p class="mobile-description">This is a brief description of the mobile phone. It includes key features and specifications.</p>
+                    <p class="product-price">$202.75</p>
+                    <button class="add-to-cart" data-name="OnePlus 10Pro" data-image="images/oneplus 10 pro.png" data-price="$202.75">Add to Cart</button>
+                </div>
+            </a>
+            <a href="#" class="mobile-item">
+                <img src="images/oneplus Nord N10.png" alt="Mobile Name" class="mobile-image">
+                <div class="mobile-details">
+                    <h3>OnePlus Nord N10 5G</h3>
+                    <p class="mobile-description">This is a brief description of the mobile phone. It includes key features and specifications.</p>
+                    <p class="product-price">$235.00</p>
+                    <button class="add-to-cart" data-name="OnePlus Nord N10 5G" data-image="images/oneplus Nord N10.png" data-price="$235.00">Add to Cart</button>
+                </div>
+            </a>
+           </div>
+           <!--pagination--> 
+           <div class="pagination">
+            <a href="oneplus.html" class="page-link">1</a>
+            <a href="oneplus1.html" class="page-link">2</a>
+            <a href="oneplus2.html" class="page-link">3</a>
+             </div> 
+   </main>
+    <footer>
+        <div class="footer-container">
+          <div class="footer-section">
+              <h3>About</h3>
+              <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Careers</a></li>
+              </ul>
+          </div>
+        
+          <div class="footer-section">
+            <h3>Help</h3>
+            <ul>
+              <li><a href="#">Cancellation & returns</a></li>
+              <li><a href="#">Payments</a></li>
+              <li><a href="#">Shipment</a></li>
+            </ul>
+        </div> 
+              <div class="footer-section">
+              <h3>Consumer Policy</h3>
+              <ul>
+                  <li><a href="#">Cancellation Policy</a></li>
+                  <li><a href="#">Terms Of Use</a></li>
+                  <li><a href="#">Security</a></li>
+                  <li><a href="#">Privacy</a></li>
+              </ul>
+          </div>
+          <div class="vertical-line"> </div>
+          <div class="footer-section">
+            <h3>Registered Office Address</h3>
+            <p>123 Elm Street,
+              Citytown, Stateville 56789,
+              Countryland</p>
+           
+        </div>
+          <div class="footer-section">
+              
+              <h3>Follow Us</h3>
+              <ul>
+                  <li><a href="#">Facebook</a></li>
+                  <li><a href="#">Twitter</a></li>
+                  <li><a href="#">Instagram</a></li>
+              </ul>
+          </div>
+          <div class="footer-section">
+             <ul>
+                  <li>&copy; 2024 Bargain Basket.com</li>
+              </ul>
+          </div>
+          <div class="footer-section">
+            <ul>
+              <li><a href="#">Help Center</a></li>
+             </ul>
+         </div>
+         <div class="footer-section">
+          <ul>
+            <li><a href="#">Advertise</a></li>
+           </ul>
+       </div>
+       <div class="footer-section">
+        <ul>
+             <li><a href="#">Become a Seller</a></li>
+         </ul>
+     </div>
+         
+      </div>
+        </footer>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+     // Add event listeners to all "Add to Cart" buttons
+     document.querySelectorAll('.add-to-cart').forEach(button => {
+         button.addEventListener('click', function () {
+             const name = this.getAttribute('data-name');
+             const image = this.getAttribute('data-image');
+             const price = this.getAttribute('data-price');
+ 
+             // Retrieve the current cart items from localStorage
+             let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+ 
+             // Add the new item to the cart
+             cartItems.push({ name, image, price });
+ 
+             // Save the updated cart items to localStorage
+             localStorage.setItem('cartItems', JSON.stringify(cartItems));
+ 
+             // Show the popup notification
+             showPopupNotification();
+         });
+     });
+ 
+     // Function to show the pop-up notification
+     function showPopupNotification() {
+         const existingNotification = document.querySelector('.popup-notification');
+         if (existingNotification) {
+             existingNotification.remove(); // Remove any existing notification
+         }
+         const notification = document.createElement('div');
+         notification.className = 'popup-notification';
+         notification.innerHTML = `
+             <p>Item added to cart.</p>
+             <button onclick="goToCart()">Go to Cart</button>
+         `;
+         document.body.appendChild(notification);
+         notification.style.display = 'block'; // Ensure notification is visible
+     }
+ 
+     // Function to handle the "Go to Cart" button click
+     window.goToCart = function() {
+         window.location.href = 'cart.html'; // Redirect to the cart page
+     }
+ });
+         </script>
+
+       
+  </body>
+  </html>
+  

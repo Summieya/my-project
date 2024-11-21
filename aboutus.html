@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bargain Basket/About Us</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        *{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+
+h1{
+    font-size: bolder;
+    margin-top:  20px;
+    margin-left: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+
+}
+ 
+    
+header {
+    background-color: #0db0f1;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+ 
+
+.search-container {
+    display: flex;
+}
+
+.search-bar {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+
+    width: 250px;
+    margin-right: 5px;
+    display: flex;
+}
+
+.search-button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f5f5ec;
+    color: #4b575cd7;
+    cursor: pointer;
+    display: flex;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-flex;
+    margin-left: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+nav a:hover{
+    background-color: #0db0f1;
+    cursor: pointer;
+    
+
+}
+.about-us h3{
+    display: flex;
+    font-size: large;
+    font-family: Arial,  sans-serif;
+    margin-top: 150px;
+    margin-left: 5px;
+    font-weight: normal;
+}
+footer {
+    background-color: #04195c;
+    color: #faf4f4;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 0px;
+    
+}
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+.footer-section {
+    flex: 1 1 180px; /* Adjust width of each section as needed */
+    text-align: left; /* Adjust alignment of content */
+}
+.footer-section h3 {
+    color: #797474; /* Example: Title color */
+    font-size: 16px; /* Example: Title font size */
+    margin-bottom: 0.5rem; /* Example: Adjust spacing */
+}
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+    font-size: 14px;
+}
+.footer-section p {
+    font-size: 0.9rem; /* Example: Adjust text size */
+}
+.footer-section a{
+    color: #fff;
+    text-decoration: none;
+    margin-top: 5px;
+    font-size: 14px;
+
+}
+.vertical-line {
+    border-left: 1px solid #f0e9e9;
+    height: 150px; /* Adjust height as needed */
+    margin-right: 20px; /* Adjust margin as needed */
+}
+.about-us {
+    position: relative;
+    height: 500px;
+    background: url('images/about_us.webp') no-repeat center center/cover;
+    filter: contrast(1.2);
+    filter: brightness(1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.about-us .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.overlay h1{
+    justify-content: center;
+    align-items: center;
+}
+.intro {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(202, 202, 250);
+    border: #f0e9e9;
+}
+
+.intro .text-content {
+    max-width: 600px;
+    
+}
+.text-content h1{
+    margin-left: 0px;
+}
+.intro img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-left: 20px;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Bargain Basket</div>
+        <div class="search-container">
+            <input type="text" placeholder="Search for products..." class="search-bar">
+            <button class="search-button">Search</button>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="main.html" title="Home"><i class="fas fa-home fa-lg"></i></a></li>
+                <li><a href="loginform.html" title="Login"><i class="fa-solid fa-user fa-lg"></i></a></li>
+                <li><a href="cart.html" title="Cart"><i class="fa-solid fa-cart-shopping fa-lg"></i></a></li>
+                <li><a href="aboutus.html" title="About Us"><i class="fa-solid fa-address-card fa-lg"></i></a></li>
+                <li><a href="contact-us.html" title="Contact Us"><i class="fa-solid fa-address-book fa-lg"></i></a></li>
+
+            </ul>
+        </nav>
+        
+    </header>
+    <main>
+        <section class="about-us">
+            <div class="overlay">
+                <h1>About Us</h1>
+                <p>Welcome to Bargain Basket, your ultimate destination for fashion, electronics, home essentials and many more. We are dedicated to providing you with the very best products, emphasizing quality, affordability, and exceptional customer service.
+
+                    Our journey began in 2010 with a passion for and a vision to make shopping easier and more enjoyable for everyone. Since our inception, we have grown into a trusted name in the industry, offering a wide range of carefully curated items that cater to your unique tastes and preferences.</p>
+            </div>
+        </section>
+    
+        <section class="intro">
+            <div class="text-content">
+                <h1>Our Mission</h1>
+                <p>At Bargain Basket, our mission is simple: to deliver happiness to your doorstep. We believe that shopping should be a hassle-free and enjoyable experience, and we strive to make that a reality for our customers. Our team works tirelessly to ensure that every product meets our high standards of quality and every customer interaction is a positive one.</p>
+                
+                <p><h3>Why Shop With Us?</h3>
+                    <uL>
+                        <li>Quality Products: We source our products from reputable suppliers and manufacturers to ensure that you receive only the best.</li>
+                        <li> Affordable Prices: We believe that quality shouldn't come at a high price. That's why we offer competitive pricing on all our products.</li>
+                        <li>Exceptional Service: Our customer support team is always ready to assist you with any questions or concerns. Your satisfaction is our top priority.</li>
+                        <li>Secure Shopping: We use the latest security measures to ensure that your personal and payment information is safe with us.</li>
+                    </uL>
+                </p>
+                <p>Thank you for choosing Bargain Basket. We look forward to serving you and making your shopping experience delightful.</p>
+                <p>
+                    <h3>Stay Connected</h3>
+                </p>
+                    <p>Follow us on social media platforms to stay updated on the latest arrivals, special offers, and exciting news. Join our community and be part of the Bargain Basket family.</p>
+
+                   <p> Happy shopping!</p>
+                        
+                        
+                
+            </div>
+            <img src="images/about1.jpeg" alt="Living Room">
+        </section>
+    
+        
+    </main>
+    <footer>
+        <div class="footer-container">
+          <div class="footer-section">
+              <h3>About</h3>
+              <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Careers</a></li>
+              </ul>
+          </div>
+        
+          <div class="footer-section">
+            <h3>Help</h3>
+            <ul>
+              <li><a href="#">Cancellation & returns</a></li>
+              <li><a href="#">Payments</a></li>
+              <li><a href="#">Shipment</a></li>
+            </ul>
+        </div> 
+              <div class="footer-section">
+              <h3>Consumer Policy</h3>
+              <ul>
+                  <li><a href="#">Cancellation Policy</a></li>
+                  <li><a href="#">Terms Of Use</a></li>
+                  <li><a href="#">Security</a></li>
+                  <li><a href="#">Privacy</a></li>
+              </ul>
+          </div>
+          <div class="vertical-line"> </div>
+          <div class="footer-section">
+            <h3>Registered Office Address</h3>
+            <p>123 Elm Street,
+              Citytown, Stateville 56789,
+              Countryland</p>
+           
+        </div>
+          <div class="footer-section">
+              
+              <h3>Follow Us</h3>
+              <ul>
+                  <li><a href="#">Facebook</a></li>
+                  <li><a href="#">Twitter</a></li>
+                  <li><a href="#">Instagram</a></li>
+              </ul>
+          </div>
+          <div class="footer-section">
+             <ul>
+                  <li>&copy; 2024 Bargain Basket.com</li>
+              </ul>
+          </div>
+          <div class="footer-section">
+            <ul>
+              <li><a href="#">Help Center</a></li>
+             </ul>
+         </div>
+         <div class="footer-section">
+          <ul>
+            <li><a href="#">Advertise</a></li>
+           </ul>
+       </div>
+       <div class="footer-section">
+        <ul>
+             <li><a href="#">Become a Seller</a></li>
+         </ul>
+     </div>
+         
+      </div>
+        </footer>
+  
+      
+  </body>
+  </html>
+  

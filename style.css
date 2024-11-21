@@ -1,0 +1,376 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    
+}
+body {
+    font-family: Arial,Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.container {
+    display: flex;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+    
+header {
+    background-color: #0db0f1;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+ 
+
+.search-container {
+    display: flex;
+}
+
+.search-bar {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+
+    width: 250px;
+    margin-right: 5px;
+    display: flex;
+}
+
+.search-button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f5f5ec;
+    color: #4b575cd7;
+    cursor: pointer;
+    display: flex;
+}
+.search-button:hover{
+    background-color: rgba(155, 153, 153, 0.664);
+}
+#search-form {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the form elements horizontally */
+    align-items: center; /* Align the items vertically */
+}
+
+#search-input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px; /* Rounded corners only on the left side */
+    margin-right: 10px; /* Prevent double borders */
+}
+
+button {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 0 4px 4px 0; /* Rounded corners only on the right side */
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-flex;
+    margin-left: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+.nav a i {
+    margin-right: 15px;
+}
+
+h1 {
+    text-align: center;
+    margin: 20px 0;
+}
+.scrolling-text {
+    white-space: nowrap;
+    overflow: hidden;
+     color: #098ee7;
+    padding: 5px;
+    position: relative;
+}
+
+.scrolling-text p {
+   
+    animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}
+.Categories{
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: left;
+     padding: 20px;
+     margin-left: 10px;
+     
+}
+
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-left: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+    grid-gap: 15px;
+    max-width: 2200px;
+    
+    
+    
+}
+
+.product {
+    background-color: white;
+    border: 1px solid rgba(161, 159, 159, 0.397);
+    border-radius: 5px;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+    width: 235px;
+    height: auto;
+    border-radius: 5px;
+}
+
+.product img {
+    max-width: 100%;
+    height: 150px;
+}
+.product h3{
+    margin-top: 10px;
+    font-size: 1 rem;
+}
+
+.price {
+    font-size: 1.2rem;
+    color: #0fadeb;
+    margin: 10px 0;
+}
+
+    
+
+button {
+    background-color: #07bbf1;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.submit{
+    margin-top: 20px;
+  
+      }
+button:hover {
+    background-color: #0485a5;
+}
+
+.container1{
+    display: flex;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+.deal{
+    display: flex;
+     flex-wrap: wrap;
+     justify-content: left;
+     padding: 20px;
+     margin-left: 10px;
+}
+ .deals{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+    grid-gap: 5px;
+    max-width: 2500px;
+     
+ }   
+ .sales{
+    background-color: white;
+    border: 1px solid rgba(155, 152, 152, 0.425);
+    border-radius: 5px;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+    width: 250px;
+    height: auto;
+ }
+ 
+.sales img{
+    max-width: 100%;
+    height: 200px;
+}
+.sales h3{
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+  .advertisement{
+    background-image: url(images/redmi\ 12X.jpg);
+    background-size: cover;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    margin: 25px;
+    padding: 40px;
+    width: 600px;
+    height: 600px;
+    
+ }
+ .ad{
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 5px;
+    
+ }
+.advertisement a{
+    display: flex;
+    margin-top: 250px;
+    cursor: pointer;
+    font-size: 30px;
+    text-align: center;
+    color: rgba(247, 241, 241, 0.986);
+    font-weight: bold;
+    text-decoration: none;
+} 
+.advertisement a:hover{
+        background-color: none;
+        transform: scale(1.1);
+
+ }
+ .deals-ad{
+    background-image: url(images/footwear.jpg);
+    background-size: cover;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 10px;
+    text-align: center;
+    width: 500px;
+    height: auto;
+ }  
+ 
+.deals-ad a{
+    display: flex;
+    margin-top: 100px;
+    cursor: pointer;
+    font-size: 30px;
+    text-align: center;
+    color: rgba(250, 244, 244, 0.986);
+    font-weight: bold;
+    text-decoration: none;
+}
+.samsung{
+    background-image: url(images/samsung\ ad.jpg);
+    background-size: cover;
+    border: 1px solid rgb(255, 251, 251);
+    border-radius: 5px;
+    margin: 25px;
+    padding: 10px;
+    align-items: center;
+    width: 640px;
+    height: 600px;
+   
+}
+.samsung a{
+    display: flex;
+    cursor: pointer;
+    font-size: 30px;
+    text-align: center;
+    color: rgb(247, 241, 241);
+    font-weight: bold;
+    text-decoration: none;
+    position: relative;
+    margin-top: 150px;
+    
+}
+.samsung a p{
+    color: white;
+    font-weight:bold;
+   text-align: center;
+   font-size: larger;
+}
+ .samsung a:hover{
+    transform: scale(1.1);
+ }
+
+
+
+
+footer {
+    background-color: #04195c;
+    color: #faf4f4;
+    text-align: center;
+    padding: 1rem 0;
+    
+}
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+.footer-section {
+    flex: 1 1 180px; /* Adjust width of each section as needed */
+    text-align: left; /* Adjust alignment of content */
+}
+.footer-section h3 {
+    color: #797474; /* Example: Title color */
+    font-size: 16px; /* Example: Title font size */
+    margin-bottom: 0.5rem; /* Example: Adjust spacing */
+}
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+    font-size: 14px;
+}
+.footer-section p {
+    font-size: 0.9rem; /* Example: Adjust text size */
+}
+.footer-section a{
+    color: #fff;
+    text-decoration: none;
+    margin-top: 5px;
+    font-size: 14px;
+
+}
+.vertical-line {
+    border-left: 1px solid #f0e9e9;
+    height: 150px; /* Adjust height as needed */
+    margin-right: 20px; /* Adjust margin as needed */
+}
+
+

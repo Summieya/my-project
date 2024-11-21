@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bargain Basket/Fashion</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        *{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+}
+header {
+    background-color: #0db0f1;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.search-container {
+    display: flex;
+}
+
+.search-bar {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+
+    width: 250px;
+    margin-right: 5px;
+    display: flex;
+}
+
+.search-button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f5f5ec;
+    color: #4b575cd7;
+    cursor: pointer;
+    display: flex;
+}
+#search-form {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the form elements horizontally */
+    align-items: center; /* Align the items vertically */
+}
+
+#search-input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px; /* Rounded corners only on the left side */
+    margin-right: 10px; /* Prevent double borders */
+}
+
+button {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 0 4px 4px 0; /* Rounded corners only on the right side */
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-flex;
+    margin-left: 20px;
+}
+
+nav a {
+    color: rgb(236, 232, 232);
+    text-decoration: none;
+}
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 10x;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.header-container .header-logo a {
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: bold;
+    color: #04195c;
+}
+
+.header-container nav {
+    flex: 1;
+}
+
+.header-container .nav-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.header-container .nav-list li {
+    margin: 0 15px;
+}
+
+.header-container .nav-list a {
+    text-decoration: none;
+    color: #04195c;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+.container {
+            display: flex;
+            height: 100vh; /* Full viewport height */
+        }
+.left{
+            flex: 1; /* Each div takes up equal space */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+}
+.right {
+            flex: 1; /* Each div takes up equal space */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+        }       
+.left img {
+            width: 100%;
+            height: 50%;
+            border-radius: 5px; /* Each image takes up half the height of the div */
+        }
+.right img {
+            width: 100%;
+            height: 103%;
+            border-radius: 5px;
+}  
+footer {
+    background-color: #04195c;
+    color: #faf4f4;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 0px;
+    
+}
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+.footer-section {
+    flex: 1 1 180px; /* Adjust width of each section as needed */
+    text-align: left; /* Adjust alignment of content */
+}
+.footer-section h3 {
+    color: #797474; /* Example: Title color */
+    font-size: 16px; /* Example: Title font size */
+    margin-bottom: 0.5rem; /* Example: Adjust spacing */
+}
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+    font-size: 14px;
+}
+.footer-section p {
+    font-size: 0.9rem; /* Example: Adjust text size */
+}
+.footer-section a{
+    color: #fff;
+    text-decoration: none;
+    margin-top: 5px;
+    font-size: 14px;
+
+}
+.vertical-line {
+    border-left: 1px solid #f0e9e9;
+    height: 150px; /* Adjust height as needed */
+    margin-right: 20px; /* Adjust margin as needed */
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Bargain Basket</div>
+        <div class="search-container">
+            <form id="search-form">
+                <input type="text" id="search-input" placeholder="Search for products..." class="search-bar">
+                  <button type="submit" class="search-button">Search</button>
+                </form>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="main.html" title="Home"><i class="fas fa-home fa-lg"></i></a></li>
+                <li><a href="loginform.html" title="Login"><i class="fa-solid fa-user fa-lg"></i></a></li>
+                <li><a href="cart.html" title="Cart"><i class="fa-solid fa-cart-shopping fa-lg"></i></a></li>
+                <li><a href="aboutus.html" title="About Us"><i class="fa-solid fa-address-card fa-lg"></i></a></li>
+                <li><a href="contact-us.html" title="Contact Us"><i class="fa-solid fa-address-book fa-lg"></i></a></li>
+    
+            </ul>
+        </nav>
+    </header>
+    <header class="header-container">
+        <div class="header-logo">
+            <a href="#">FASHION</a>
+        </div>
+        <nav>
+            <ul class="nav-list">
+                <li><a href="#">New in</a></li>
+                <li><a href="#">Shoe</a></li>
+                <li><a href="#">Men</a></li>
+                <li><a href="#">Women</a></li>
+                <li><a href="#">Baby & Kids</a></li>
+                <li><a href="#">Trend & Occasion</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <main>
+        <div class="container">
+            <div class="left">
+                <img src="images/women-fashion.png" alt="Fashion Image 1">
+                <img src="images/fashion-images.avif" alt="Fashion Image 2">
+            </div>
+            <div class="right">
+                <img src="images/men.webp" alt="Fashion Image 3">
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+          <div class="footer-section">
+              <h3>About</h3>
+              <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Careers</a></li>
+              </ul>
+          </div>
+        
+          <div class="footer-section">
+            <h3>Help</h3>
+            <ul>
+              <li><a href="#">Cancellation & returns</a></li>
+              <li><a href="#">Payments</a></li>
+              <li><a href="#">Shipment</a></li>
+            </ul>
+        </div> 
+              <div class="footer-section">
+              <h3>Consumer Policy</h3>
+              <ul>
+                  <li><a href="#">Cancellation Policy</a></li>
+                  <li><a href="#">Terms Of Use</a></li>
+                  <li><a href="#">Security</a></li>
+                  <li><a href="#">Privacy</a></li>
+              </ul>
+          </div>
+          <div class="vertical-line"> </div>
+          <div class="footer-section">
+            <h3>Registered Office Address</h3>
+            <p>123 Elm Street,
+              Citytown, Stateville 56789,
+              Countryland</p>
+           
+        </div>
+          <div class="footer-section">
+              
+              <h3>Follow Us</h3>
+              <ul>
+                  <li><a href="#">Facebook</a></li>
+                  <li><a href="#">Twitter</a></li>
+                  <li><a href="#">Instagram</a></li>
+              </ul>
+          </div>
+          <div class="footer-section">
+             <ul>
+                  <li>&copy; 2024 Bargain Basket.com</li>
+              </ul>
+          </div>
+          <div class="footer-section">
+            <ul>
+              <li><a href="#">Help Center</a></li>
+             </ul>
+         </div>
+         <div class="footer-section">
+          <ul>
+            <li><a href="#">Advertise</a></li>
+           </ul>
+       </div>
+       <div class="footer-section">
+        <ul>
+             <li><a href="#">Become a Seller</a></li>
+         </ul>
+     </div>
+         
+      </div>
+        </footer>
+  
+     
+  </body>
+  </html>
+  

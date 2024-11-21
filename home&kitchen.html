@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bargain Basket/home&kitchen</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+header {
+    background-color: #0db0f1;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+ 
+
+.search-container {
+    display: flex;
+}
+
+.search-bar {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+
+    width: 250px;
+    margin-right: 5px;
+    display: flex;
+}
+
+.search-button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f5f5ec;
+    color: #4b575cd7;
+    cursor: pointer;
+    display: flex;
+}
+#search-form {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the form elements horizontally */
+    align-items: center; /* Align the items vertically */
+}
+
+#search-input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px; /* Rounded corners only on the left side */
+    margin-right: 10px; /* Prevent double borders */
+}
+
+button {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 0 4px 4px 0; /* Rounded corners only on the right side */
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+}
+
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-flex;
+    margin-left: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+.banner {
+    display: flex;
+    align-items: center;
+    background: lightblue;
+    padding: 40px;
+}
+
+.banner-text {
+    flex: 1;
+}
+
+.banner-text h2 {
+    margin: 0;
+    color: #04195c;
+}
+
+.banner-text h1 {
+    margin: 10px 0;
+    font-size: 2.5em;
+}
+
+.banner-text .btn {
+    text-decoration: none;
+    background: #04195c;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 10px;
+    
+}
+
+.banner-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.products {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.product-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.product-item {
+    background: #fff;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    width: calc(25% - 40px);
+    box-sizing: border-box;
+    border-radius: 5px;
+}
+
+.product-item img {
+    max-width: 100%;
+    height: 150px;
+    margin-top: 10px;
+}
+
+.product-item .btn {
+    display: inline-block;
+    text-decoration: none;
+    background: #f50057;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.product-item .price{
+    margin-top: 10px;
+    font-size: 18px;
+    color: #333333;
+    font-weight: bold;
+}
+.list {
+    width: 127%;
+    max-width: 1260px;
+    margin-left: 40px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    background-color: #ffffff;
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    margin: 20px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.image {
+    width: 180px;
+    height: auto;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.product-details {
+    flex: 1;
+}
+
+.product-title {
+    margin: 0 0 10px;
+    font-size: 24px;
+    color: #333333;
+}
+
+.product-description {
+    margin: 0 0 10px;
+    font-size: 16px;
+    color: #666666;
+}
+
+.product-price {
+    margin: 0 0 20px;
+    font-size: 18px;
+    color: #333333;
+    font-weight: bold;
+}
+
+.add-to-cart-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #f50057;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.add-to-cart-button:hover {
+    background-color: #f50057;
+}
+
+footer {
+    background-color: #04195c;
+    color: #faf4f4;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 0px;
+    
+}
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+.footer-section {
+    flex: 1 1 180px; /* Adjust width of each section as needed */
+    text-align: left; /* Adjust alignment of content */
+}
+.footer-section h3 {
+    color: #797474; /* Example: Title color */
+    font-size: 16px; /* Example: Title font size */
+    margin-bottom: 0.5rem; /* Example: Adjust spacing */
+}
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+    font-size: 14px;
+}
+.footer-section p {
+    font-size: 0.9rem; /* Example: Adjust text size */
+}
+.footer-section a{
+    color: #fff;
+    text-decoration: none;
+    margin-top: 5px;
+    font-size: 14px;
+
+}
+.vertical-line {
+    border-left: 1px solid #f0e9e9;
+    height: 150px; /* Adjust height as needed */
+    margin-right: 20px; /* Adjust margin as needed */
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Bargain Basket</div>
+        <div class="search-container">
+            <form id="search-form">
+                <input type="text" id="search-input" placeholder="Search for products..." class="search-bar">
+                  <button type="submit" class="search-button">Search</button>
+                </form>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="main.html" title="Home"><i class="fas fa-home fa-lg"></i></a></li>
+                <li><a href="loginform.html" title="Login"><i class="fa-solid fa-user fa-lg"></i></a></li>
+                <li><a href="cart.html" title="Cart"><i class="fa-solid fa-cart-shopping fa-lg"></i></a></li>
+                <li><a href="aboutus.html" title="About Us"><i class="fa-solid fa-address-card fa-lg"></i></a></li>
+                <li><a href="contact-us.html" title="Contact Us"><i class="fa-solid fa-address-book fa-lg"></i></a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="banner">
+            <div class="banner-text">
+                <h2>LIMITED TIME OFFER</h2>
+                <h1>Stock your Kitchen with Right Appliances</h1>
+                <a href="#" class="btn">Buy Now</a>
+            </div>
+            <div class="banner-image">
+                <img src="images/kitchenn.png" alt="Kitchen Appliances">
+            </div>
+        </section>
+        
+        <section class="products">
+            <h2>Products</h2>
+            <div class="product-list">
+                <div class="product-item">
+                    <img src="images/grinder2.png" alt="Product 1">
+                    <h3>Grinder</h3>
+                    <p class="price">$49.97</p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+                <div class="product-item">
+                    <img src="images/nonstick.png" alt="Product 2">
+                    <h3>Nonstick saucepan</h3>
+                    <p class="price">$89.94</p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+                <div class="product-item">
+                    <img src="images/cooker.jpg" alt="Product 3">
+                    <h3>Cooker</h3>
+                    <p class="price">$59.92</p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+                <div class="product-item">
+                    <img src="images/induction.png" alt="Product 4">
+                    <h3>Induction Stove</h3>
+                    <p class="price">$99.99</p>
+                    <a href="#" class="btn">Add to Cart</a>
+                </div>
+            </div>
+        </section>
+        <div class="list">
+            <div class="item">
+                <img src="images/juicer.png" alt="Product Image" class="image">
+                <div class="product-details">
+                    <h2 class="product-title">Juicer</h2>
+                    <p class="product-description">Effortlessly extract fresh, nutrient-rich juice from your favorite fruits and vegetables with our High-Performance Juicer. Featuring a powerful motor, large feeding chute, and easy-to-clean design, this juicer is perfect for a quick and healthy lifestyle boost</p>
+                    <p class="product-price">$56.41</p>
+                    <button class="add-to-cart-button">Add to Cart</button>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    <footer>
+        <div class="footer-container">
+          <div class="footer-section">
+              <h3>About</h3>
+              <ul>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Careers</a></li>
+              </ul>
+          </div>
+        
+          <div class="footer-section">
+            <h3>Help</h3>
+            <ul>
+              <li><a href="#">Cancellation & returns</a></li>
+              <li><a href="#">Payments</a></li>
+              <li><a href="#">Shipment</a></li>
+            </ul>
+        </div> 
+              <div class="footer-section">
+              <h3>Consumer Policy</h3>
+              <ul>
+                  <li><a href="#">Cancellation Policy</a></li>
+                  <li><a href="#">Terms Of Use</a></li>
+                  <li><a href="#">Security</a></li>
+                  <li><a href="#">Privacy</a></li>
+              </ul>
+          </div>
+          <div class="vertical-line"> </div>
+          <div class="footer-section">
+            <h3>Registered Office Address</h3>
+            <p>123 Elm Street,
+              Citytown, Stateville 56789,
+              Countryland</p>
+           
+        </div>
+          <div class="footer-section">
+              
+              <h3>Follow Us</h3>
+              <ul>
+                  <li><a href="#">Facebook</a></li>
+                  <li><a href="#">Twitter</a></li>
+                  <li><a href="#">Instagram</a></li>
+              </ul>
+          </div>
+          <div class="footer-section">
+             <ul>
+                  <li>&copy; 2024 Bargain Basket.com</li>
+              </ul>
+          </div>
+          <div class="footer-section">
+            <ul>
+              <li><a href="#">Help Center</a></li>
+             </ul>
+         </div>
+         <div class="footer-section">
+          <ul>
+            <li><a href="#">Advertise</a></li>
+           </ul>
+       </div>
+       <div class="footer-section">
+        <ul>
+             <li><a href="#">Become a Seller</a></li>
+         </ul>
+     </div>
+         
+      </div>
+        </footer>
+    </body>
+    </html>

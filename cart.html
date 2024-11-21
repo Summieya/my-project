@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+       body {
+    font-family: Arial,Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+       #cart-items {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: auto;
+    gap: 10px;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 10px;
+}
+#cart-actions {
+    margin-top: 20px;
+    text-align: center;
+}
+.cart-item {
+    display: flex;
+    align-items: center;
+    width: 95%;
+    padding: 10px;
+    margin-right: 5px;
+    border: 1px solid rgba(128, 128, 128, 0.479);
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for better visual effect */
+}
+.cart-item:hover{
+    background-color: whitesmoke;
+}
+.cart-item-image {
+    width: 100px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 15px;
+}
+
+.cart-item-details {
+    flex: 1;
+}
+
+.clear-cart-button {
+    background-color: #007bff; 
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 0.3s;
+}
+
+.clear-cart-button:hover {
+    background-color: #0056b3; 
+}
+.checkout-button{
+    background-color: #007bff; 
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    transition: background-color 0.3s;
+
+}
+.remove-button {
+    background-color: rgba(128, 128, 128, 0.836); 
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+.remove-button:hover {
+    background-color: rgba(128, 128, 128, 0.281); 
+}
+.hidden{
+    display: none;
+}
+ h1 {
+    margin-left: 15px;
+ }
+header {
+    background-color: #0db0f1;
+    color: white;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+ 
+
+.search-container {
+    display: flex;
+}
+
+.search-bar {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+
+    width: 250px;
+    margin-right: 5px;
+    display: flex;
+}
+
+.search-button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f5f5ec;
+    color: #4b575cd7;
+    cursor: pointer;
+    display: flex;
+}
+#search-form {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center the form elements horizontally */
+    align-items: center; /* Align the items vertically */
+}
+
+#search-input {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px; /* Rounded corners only on the left side */
+    margin-right: 10px; /* Prevent double borders */
+}
+
+button {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 0 4px 4px 0; /* Rounded corners only on the right side */
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+}
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline-flex;
+    margin-left: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+ footer {
+    background-color: #04195c;
+    color: #faf4f4;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 200px;
+ }   
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    
+}
+.footer-section {
+    flex: 1 1 180px; /* Adjust width of each section as needed */
+    text-align: left; /* Adjust alignment of content */
+}
+.footer-section h3 {
+    color: #797474; /* Example: Title color */
+    font-size: 16px; /* Example: Title font size */
+    margin-bottom: 0.5rem; /* Example: Adjust spacing */
+}
+.footer-section ul {
+    list-style-type: none;
+    padding: 0;
+}
+.footer-section ul li {
+    margin-bottom: 0.5rem;
+    font-size: 14px;
+}
+.footer-section p {
+    font-size: 0.9rem; /* Example: Adjust text size */
+}
+.footer-section a{
+    color: #fff;
+    text-decoration: none;
+    margin-top: 5px;
+    font-size: 14px;
+
+}
+.vertical-line {
+    border-left: 1px solid #f0e9e9;
+    height: 150px; /* Adjust height as needed */
+    margin-right: 20px; /* Adjust margin as needed */
+}
+
+</style> 
+     
+</head>
+<body>
+    <header>
+        <div class="logo">Bargain Basket</div>
+        <div class="search-container">
+          <form id="search-form">
+          <input type="text" id="search-input" placeholder="Search for products..." class="search-bar">
+            <button type="submit" class="search-button">Search</button>
+          </form>
+          </div>
+        <nav>
+            <ul>
+                <li><a href="main.html" title="Home"><i class="fas fa-home fa-lg"></i></a></li>
+                <li><a href="loginform.html" title="Login"><i class="fa-solid fa-user fa-lg"></i></a></li>
+                <li><a href="cart.html" title="Cart"><i class="fa-solid fa-cart-shopping fa-lg"></i></a></li>
+                <li><a href="aboutus.html" title="About Us"><i class="fa-solid fa-address-card fa-lg"></i></a></li>
+                <li><a href="contact-us.html" title="Contact Us"><i class="fa-solid fa-address-book fa-lg"></i></a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+   
+    
+    <main>
+        <h1>Your Cart</h1>
+        <div id="cart-items">
+            <!-- Cart items will be displayed here -->
+        </div>
+        <div id="cart-actions">
+        <button id="clear-cart" class="clear-cart-button">Clear Cart</button>
+        <button id="proceed-checkout" class="checkout-button"  onclick="window.location.href='checkout.html';">Proceed to Checkout</button>
+    </div>
+    </main>
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About</h3>
+                <ul>
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                  <li><a href="#">Careers</a></li>
+                </ul>
+            </div>
+          
+            <div class="footer-section">
+              <h3>Help</h3>
+              <ul>
+                <li><a href="#">Cancellation & returns</a></li>
+                <li><a href="#">Payments</a></li>
+                <li><a href="#">Shipment</a></li>
+              </ul>
+          </div> 
+                <div class="footer-section">
+                <h3>Consumer Policy</h3>
+                <ul>
+                    <li><a href="#">Cancellation Policy</a></li>
+                    <li><a href="#">Terms Of Use</a></li>
+                    <li><a href="#">Security</a></li>
+                    <li><a href="#">Privacy</a></li>
+                </ul>
+            </div>
+            <div class="vertical-line"> </div>
+            <div class="footer-section">
+              <h3>Registered Office Address</h3>
+              <p>123 Elm Street,
+                Citytown, Stateville 56789,
+                Countryland</p>
+             
+          </div>
+            <div class="footer-section">
+                
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#">Facebook</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+               <ul>
+                    <li>&copy; 2024 Bargain Basket.com</li>
+                </ul>
+            </div>
+            <div class="footer-section">
+              <ul>
+                <li><a href="#">Help Center</a></li>
+               </ul>
+           </div>
+           <div class="footer-section">
+            <ul>
+              <li><a href="#">Advertise</a></li>
+             </ul>
+         </div>
+         <div class="footer-section">
+          <ul>
+               <li><a href="#">Become a Seller</a></li>
+           </ul>
+       </div>
+           
+        </div>
+         
+       
+    </footer>
+    <script>
+       document.addEventListener('DOMContentLoaded', function () {
+    const clearCartButton = document.getElementById('clear-cart');
+    const proceedCheckoutButton = document.getElementById('proceed-checkout');
+    const cartItemsContainer = document.getElementById('cart-items');
+    const cartActions = document.getElementById('cart-actions');
+
+    function displayCartItems() {
+        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        cartItemsContainer.innerHTML = ''; // Clear existing items
+
+        if (cartItems.length === 0) {
+            cartItemsContainer.innerHTML = '<p>Your cart is empty.</p>';
+            cartActions.classList.add('hidden'); // Hide actions if cart is empty
+            return;
+        }
+
+        cartActions.classList.remove('hidden'); // Show actions if there are items
+
+        cartItems.forEach((item, index) => {
+            const itemElement = document.createElement('div');
+            itemElement.className = 'cart-item';
+            itemElement.innerHTML = `
+                <img src="${item.image}" alt="${item.name}" class="cart-item-image">
+                <div class="cart-item-details">
+                    <h3>${item.name}</h3>
+                    <p>${item.price}</p>
+                    <button class="remove-button" data-index="${index}">Remove</button>
+                </div>
+            `;
+            cartItemsContainer.appendChild(itemElement);
+        });
+
+        // Add event listeners to all "Remove" buttons
+        document.querySelectorAll('.remove-button').forEach(button => {
+            button.addEventListener('click', function () {
+                const index = this.getAttribute('data-index');
+                removeCartItem(index);
+            });
+        });
+    }
+
+    function removeCartItem(index) {
+        let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        cartItems.splice(index, 1); // Remove item at specified index
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+        // Refresh the cart page to update the displayed items
+        displayCartItems();
+    }
+
+    clearCartButton.addEventListener('click', function () {
+        localStorage.removeItem('cartItems');
+        displayCartItems(); // Refresh cart display
+    });
+
+    // Display cart items on page load
+    displayCartItems();
+});
+
+    </script>
+</body>
+</html>
